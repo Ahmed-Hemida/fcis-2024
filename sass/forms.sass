@@ -1,0 +1,28 @@
+@import 'variables'
+@import 'mixins'
+
+input:focus, textarea:focus, select:focus
+    outline: none
+
+input[type=text],
+select,
+textarea,
+    width: 100%
+    padding: 0.5rem 1rem
+    margin: 0.3rem 0
+    display: inline-block
+    border-radius: 6px
+    font-size: 16px
+    font-weight: 500
+    +apply-box-shadow(0,0, 5px)
+    box-sizing: border-box
+    border: none
+    background-color: #424247
+    color: #E1E1E1
+
+input[type=submit]
+    margin: 0.3rem 0
+    width: 100%
+
+input[marker=name]
+    width: 49%
