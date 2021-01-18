@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-color: #16161A;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 17fr;
+      grid-template-columns: 1fr 17fr;
+  grid-column-gap: 30px;
+}
+
+.navigation {
+  min-width: 77px;
+  background-color: #424247;
+  margin: 25px 0;
+  border-radius: 0 15px 15px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+  -webkit-box-shadow: 4px 0 5px black;
+          box-shadow: 4px 0 5px black;
+}
+
+.navigation .main-nav {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+.navigation .sub-nav {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+.navigation ul #top-item {
+  border-radius: 0 15px 0 0;
+}
+
+.navigation ul #bottom-item {
+  border-radius: 0 0 15px 0;
+}
+
+.navigation ul li {
+  padding: 0.5rem 0;
+  -webkit-transition: background-color 150ms ease-out;
+  transition: background-color 150ms ease-out;
+}
+
+.navigation ul li a div {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+.navigation ul li a div img {
+  width: 50px;
+  height: 50px;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+}
+
+.navigation ul li a div p {
+  display: none;
+  font-size: 0.75rem;
+  margin-top: -8px;
+}
+
+.navigation ul li:not(.active):hover {
+  background-color: #62626a;
+}
+
+.navigation ul .active {
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
+  background-color: #7b7b85;
+}
+
+.navigation ul .active p {
+  display: block;
+}
+
+.right-side {
+  margin-top: 25px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr auto;
+      grid-template-rows: auto 1fr auto;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+header h1 {
+  display: inline;
+}
+
+footer {
+  background-color: #424247;
+  border-top-left-radius: 15px;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr auto;
+      grid-template-columns: auto 1fr auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer a {
+  -webkit-transition: color 70ms ease-in;
+  transition: color 70ms ease-in;
+}
+
+footer a:hover {
+  color: #C8C8C8;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+footer div ul {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer div ul li {
+  margin-right: 1rem;
+}
+
+footer h4 {
+  text-align: right;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column: 3;
+  grid-column: 3;
+  color: #C8C8C8;
+  font-weight: 400;
+}
+
+footer h4 a {
+  font-weight: 500;
+}
+
+.spacer {
+  margin-top: 1.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  color: #3185FC;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 45px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+p {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.btn {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px 25px;
+  background-color: #3185FC;
+  border: 2px solid #0065A8;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-transition: background-color 100ms ease-in;
+  transition: background-color 100ms ease-in;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px black;
+          box-shadow: 0 0 5px black;
+}
+
+.btn:hover {
+  background-color: #0065A8;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+body #wave {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -999999;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}

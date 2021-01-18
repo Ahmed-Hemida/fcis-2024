@@ -1,0 +1,159 @@
+@import 'variables'
+@import 'mixins'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+
+body
+    height: 100vh
+    background-color: $primary-dark
+    display: grid
+    grid-template-columns: 1fr 17fr
+    grid-column-gap: 30px
+
+.navigation
+    min-width: 77px
+    background-color: $overlays-dark
+    margin: 25px 0
+    border-radius: 0 $border-radius $border-radius 0
+    display: grid
+    grid-template-rows: auto 1fr auto
+    +apply-box-shadow(4px, 0, 5px)
+    .main-nav
+        grid-row: 1/2
+    .sub-nav
+        grid-row: 3/4
+    ul
+        #top-item
+            border-radius: 0 $border-radius 0 0
+        #bottom-item
+            border-radius: 0 0 $border-radius 0
+        li
+            padding: 0.5rem 0
+            transition: background-color 150ms ease-out
+            a div
+                align-content: center
+                text-align: center
+                img
+                    +set-size(50px, 50px)
+                    transition: transform 1s linear
+                p
+                    display: none
+                    font-size: 0.75rem
+                    margin-top: -8px
+            &:not(.active):hover
+                background-color: #62626a
+        .active
+            +apply-box-shadow(0,0, 5px)
+            background-color: #7b7b85
+            p
+                display: block
+
+.right-side
+    margin-top: 25px
+    display: grid
+    grid-template-rows: auto 1fr auto
+
+header
+    display: flex
+    justify-content: start
+    align-self: flex-start
+    h1
+        display: inline
+
+footer
+    background-color: $overlays-dark
+    border-top-left-radius: $border-radius
+    +apply-box-shadow(0,0, 5px)
+    padding: 1rem
+    display: grid
+    grid-template-columns: auto 1fr auto
+    align-content: center
+    a
+        transition: color 70ms ease-in
+        &:hover
+            color: #C8C8C8
+    div
+        display: flex
+        align-items: center
+        align-content: center
+        align-self: center
+        ul
+            grid-column: 1
+            margin-left: 2rem
+            display: flex
+            li
+                margin-right: 1rem
+    h4
+        text-align: right
+        align-self: center
+        grid-column: 3
+        color: #C8C8C8
+        font-weight: 400
+        a
+            font-weight: 500
+
+.spacer
+    margin-top: 1.5rem
+
+ul
+    list-style: none
+a
+    color: #ffffff
+    font-weight: 500
+    font-size: 1rem
+    text-decoration: none
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+    color: $text-color
+    margin: 0
+    padding: 0
+span
+    color: $primary-blue
+
+h1
+
+    font-size: 50px
+    font-weight: 600
+    letter-spacing: -2px
+    line-height: 45px
+h2
+    font-size: 32px
+    font-weight: 500
+p
+    font-weight: 500
+    font-size: 18px
+
+.btn
+    font-size: 18px
+    font-weight: 400
+    padding: 5px 25px
+    background-color: $primary-blue
+    border: 2px solid $secondary-blue
+    color: $text-color
+    border-radius: 5px
+    transition: background-color 100ms ease-in
+    cursor: pointer
+    +apply-box-shadow(0,0, 5px)
+    &:hover
+        background-color: $secondary-blue
+
+body
+    position: relative
+    overflow: hidden
+    #wave
+        position: absolute
+        width: 100%
+        left: 0
+        bottom: 0
+        z-index: -999999
+        transform: scale(1.1)

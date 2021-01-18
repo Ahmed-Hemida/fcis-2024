@@ -1,0 +1,61 @@
+main h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+main h2,
+main a {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+main #sub-groups,
+main #sections {
+  text-decoration: underline;
+}
+
+main .container .schedules-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+main .container .schedules-container .schedule img {
+  width: 380px;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 5px black;
+          box-shadow: 0px 0px 5px black;
+  border-radius: 15px;
+}
+
+main .container .quote {
+  width: 70%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container .quote img {
+  width: 180px;
+  height: 180px;
+}
+
+main .container .quote h1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 56.88px;
+  margin: 2rem 0 0 1rem;
+}
+
+main .container .quote h1 #emoji {
+  width: 45px;
+  height: 41px;
+}
